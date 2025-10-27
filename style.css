@@ -1,0 +1,208 @@
+/* ========================= */
+/* Global Styles             */
+/* ========================= */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #080f2b;
+  color: #ffffff;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px; /* tabel lebih lebar */
+  margin-top: 30px;
+}
+
+/* ========================= */
+/* Task Form                 */
+/* ========================= */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 12px 15px;
+  width: 66%;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0e0bca;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #112986;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #131938;
+  transform: scale(1.05);
+}
+
+/* ========================= */
+/* Search Bar                */
+/* ========================= */
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#search-box {
+  padding: 12px 15px;
+  width: 81%;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+#search-box:focus {
+  border-color: #0e0bca;
+  outline: none;
+}
+
+/* ========================= */
+/* Tabel Gabungan Pending/Done */
+/* ========================= */
+.tables {
+  width: 90%;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  margin-top: 30px;
+  background: #fff;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 2px solid #1f2433;
+  background: #0d1224;
+}
+
+.tables th {
+  background: linear-gradient(135deg, #090e24, #090e24);
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #1f2433;
+}
+
+.tables td {
+  padding: 12px;
+ 
+  vertical-align: top;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+  border: 1px solid #1f1f1f;
+}
+
+/* ========================= */
+/* Task Wrapper agar tombol di samping */
+/* ========================= */
+.task-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-text {
+  flex: 1; /* biar teks tetap fleksibel */
+}
+
+.task-text div {
+  font-size: 1rem;
+}
+
+small.task-date {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #00ff22;
+}
+
+/* ========================= */
+/* Tombol di dalam tabel     */
+/* ========================= */
+.btn-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
+}
+
+.btn-group button {
+  margin: 0;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-group button.edit { background: #28a745; color: white; }
+.btn-group button.delete { background: #c9302c; color: white; }
+.btn-group button.done { background: #c9302c; color: white; }
+
+.btn-group button.edit:hover { background: #218838; }
+.btn-group button.delete:hover { background: #a71d2a; }
+.btn-group button.done:hover { background: #a71d2a; }
+
+/* ========================= */
+/* Responsive                */
+/* ========================= */
+@media (max-width: 768px) {
+  input[type="text"], #search-box {
+    width: 80%;
+  }
+  .tables, .tables tbody, .tables tr, .tables td {
+    display: block;
+    width: 100%;
+  }
+  .tables td {
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+  .task-wrapper {
+    flex-direction: column; /* tombol turun ke bawah saat layar kecil */
+    align-items: flex-start;
+  }
+}

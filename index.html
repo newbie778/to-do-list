@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task List Ozora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Task List</h1>
+
+    <!-- Form untuk menambah tugas -->
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Tambahkan tugas baru..." />
+      <button type="submit">Tambahkan Tugas</button>
+    </form>
+
+    <!-- Form Pencarian -->
+    <div class="search-container">
+      <input type="text" id="search-box" placeholder="Cari tugas..." oninput="searchTasks()" />
+    </div>
+
+    <!-- Tabel Gabungan Tugas -->
+    <table class="tables">
+      <thead>
+        <tr>
+          <th>Tugas Belum Selesai</th>
+          <th>Tugas Selesai</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="task-list-pending"></td>
+          <td id="task-list-done"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
